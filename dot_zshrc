@@ -1,0 +1,56 @@
+source /usr/local/opt/zinit/zinit.zsh
+
+zinit wait lucid for \
+zdharma/history-search-multi-word \
+zdharma-continuum/zinit-annex-bin-gem-node \
+atload"bindkey '^[[A' history-substring-search-up;bindkey '^[[B' history-substring-search-down" zsh-users/zsh-history-substring-search \
+zsh-users/zsh-autosuggestions
+
+
+zinit wait lucid for \
+OMZL::completion.zsh \
+OMZL::correction.zsh \
+OMZP::brew \
+OMZP::cp \
+OMZP::git \
+OMZP::pip \
+atload"export ZSH_TMUX_ITERM2=true" OMZP::tmux
+
+
+zinit ice from"gh-r" fbin"starship" \
+atclone"./starship init zsh > init.zsh; ./starship completions zsh > _starship" \
+atpull"%atclone" src"init.zsh"
+zinit light starship/starship
+
+zinit ice atload"unalias lsa l ll la"
+zinit snippet OMZL::directories.zsh
+
+
+zinit wait lucid atinit'zicompinit' for \
+zdharma/fast-syntax-highlighting \
+
+
+
+alias q='exit'
+alias vi='nvim'
+alias vim='nvim'
+
+alias l='eza -gF -sName --group-directories-first --git'
+alias la='l -a'
+alias ldd='l -aD'
+alias ldi='l -D'
+alias ldot='l -d .*'
+alias ll='l -l'
+alias lla='l -la'
+alias ls='l -ssize'
+alias lsd='l -d'
+alias lsdl='l -ld'
+alias lt='l -snewest'
+
+alias cp='cp -aiv'
+alias mv='mv -iv'
+alias rm='rm -iv'
+
+alias kat='cat -enstv'
+alias kurl='curl -LZJOR --compressed'
+alias les='less -FgiJmNsSw --incsearch --mouse --use-color'
