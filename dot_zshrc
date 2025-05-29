@@ -34,7 +34,15 @@ zinit light ryanoasis/nerd-fonts
 zinit wait lucid atinit'zicompinit' for \
 zdharma/fast-syntax-highlighting \
 
-
+zinit wait lucid \
+atclone"mkdir -p $ZPFX/bin" \
+atclone"./fzf --zsh |sed -n '/### completion/,/### end: completion/p' > _fzf_completion" \
+atclone"./fzf --zsh |sed -n '/### key-bindings/,/### end: key-bindings/p' > key-bindings.zsh" \
+atpull"%atclone" \
+from'gh-r' \
+sbin'fzf' \
+src"key-bindings.zsh" \
+for @junegunn/fzf
 
 alias q='exit'
 alias vi='nvim'
