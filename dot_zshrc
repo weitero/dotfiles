@@ -44,6 +44,9 @@ from'gh-r' \
 lbin'!fzf' \
 src"key-bindings.zsh" \
 for @junegunn/fzf
+zinit ice as'completion'
+zinit snippet https://github.com/lmburns/dotfiles/blob/master/.config/zsh/completions/_fzf
+
 
 alias q='exit'
 alias vi='nvim'
