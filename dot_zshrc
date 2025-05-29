@@ -25,6 +25,10 @@ zinit light starship/starship
 zinit ice atload"unalias lsa l ll la"
 zinit snippet OMZL::directories.zsh
 
+zinit ice wait lucid \
+from'gh-r' as'command' bpick'FontPatcher.zip' pick'font-patcher'  \
+atclone"sed -i '' '1s/python$/python3/' font-patcher" atpull"%atclone"
+zinit light ryanoasis/nerd-fonts
 
 zinit wait lucid atinit'zicompinit' for \
 zdharma/fast-syntax-highlighting \
