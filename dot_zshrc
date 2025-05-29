@@ -1,8 +1,9 @@
 source /usr/local/opt/zinit/zinit.zsh
 
+zinit light zdharma-continuum/zinit-annex-bin-gem-node
+
 zinit wait lucid for \
 zdharma/history-search-multi-word \
-zdharma-continuum/zinit-annex-bin-gem-node \
 atload"bindkey '^[[A' history-substring-search-up;bindkey '^[[B' history-substring-search-down" zsh-users/zsh-history-substring-search \
 zsh-users/zsh-autosuggestions
 
