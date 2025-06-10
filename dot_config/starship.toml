@@ -1,0 +1,373 @@
+add_newline = false
+
+[aws]
+symbol = "󰸏 "
+expiration_symbol = "󰌊 "
+
+[azure]
+symbol = "󰠅 "
+
+[battery]
+full_symbol = "󰁹"
+charging_symbol = "󰂄"
+discharging_symbol = "󰂃"
+unknown_symbol = "󰂑"
+empty_symbol = "󰂎"
+[[battery.display]]
+threshold = 20
+
+[buf]
+symbol = "󱪿 "
+
+[bun]
+symbol = " "
+
+[c]
+symbol = " "
+
+[cpp]
+symbol = " "
+
+[character]
+success_symbol = "[󰋇](bold green)"
+error_symbol = "[󰋇](bold red)"
+vimcmd_symbol = "[](bold green)"
+vimcmd_replace_one_symbol = "[](bold purple)"
+vimcmd_replace_symbol = "[](bold purple)"
+vimcmd_visual_symbol = "[](bold yellow)"
+
+[cmake]
+symbol = " "
+
+[cobol]
+symbol = " "
+
+[cmd_duration]
+
+[conda]
+symbol = " "
+ignore_base = false
+
+[container]
+symbol = " "
+
+[crystal]
+symbol = " "
+
+[daml]
+symbol = "󰅃 "
+
+[dart]
+symbol = " "
+
+[deno]
+symbol = " "
+
+[directory]
+read_only = "[󰌾]"
+
+[direnv]
+allowed_msg = "󰈖"
+not_allowed_msg = "󰮘"
+denied_msg = "󰷆"
+loaded_msg = "󰝒"
+unloaded_msg = "󱪡"
+
+[docker_context]
+symbol = "󰡨 "
+
+[dotnet]
+format = "via [$symbol($version )( $tfm )]($style)"
+symbol = "󰪮 "
+
+[elixir]
+format = "via [$symbol($version \\( $otp_version\\) )]($style)"
+symbol = " "
+
+[elm]
+symbol = " "
+
+[env_var]
+
+[erlang]
+symbol = " "
+
+[fennel]
+symbol = " "
+
+[fill]
+symbol = ""
+
+[fossil_branch]
+symbol = "󰘬 "
+
+[fossil_metrics]
+
+[gcloud]
+symbol = "󱇶 "
+
+[git_branch]
+symbol = "󰘬 "
+
+[git_commit]
+tag_symbol = "󰓹 "
+
+[git_state]
+
+[git_metrics]
+
+[git_status]
+format = "([\\[($all_status )$ahead_behind\\]]($style) )"
+conflicted = "󱒒"
+ahead = "󱦲"
+behind = "󱦳"
+diverged = "󰓢"
+up_to_date = "󰓦"
+untracked = "󰞋"
+stashed = "󱑢"
+modified = "󱗜"
+staged = "󰐖"
+renamed = "󰜵"
+deleted = "󰍵"
+typechanged = "󰀧"
+
+[gleam]
+symbol = "󰦥 "
+
+[golang]
+symbol = "󰟓 "
+
+[guix_shell]
+symbol = " "
+
+[gradle]
+symbol = " "
+
+[haskell]
+symbol = "󰲒 "
+
+[haxe]
+symbol = " "
+
+[helm]
+symbol = ""
+
+[hostname]
+ssh_symbol = "󰣀 "
+trim_at = "" # `''` will disable any truncation.
+
+[java]
+symbol = "󰬷 "
+
+[jobs]
+symbol = "󰎂 "
+
+[julia]
+symbol = " "
+
+[kotlin]
+symbol = "󱈙 "
+
+[kubernetes]
+symbol = "󱃾 "
+
+[line_break]
+
+[localip]
+
+[lua]
+symbol = "󰢱 "
+lua_binary = "luajit"
+
+[memory_usage]
+threshold = 80
+symbol = "󰍛 "
+disabled = false
+
+[meson]
+symbol = "󰯙 "
+
+[hg_branch]
+symbol = "󰘬 "
+
+[mise]
+
+[mojo]
+symbol = "󰈸 "
+
+[nats]
+symbol = "󰬕 "
+
+[netns]
+symbol = "󰖩 "
+
+[nim]
+symbol = " "
+
+[nix_shell]
+symbol = "󱄅 "
+
+[nodejs]
+symbol = "󰎙 "
+
+[ocaml]
+symbol = " "
+
+[odin]
+symbol = "󰟢 "
+
+[opa]
+symbol = "󰥯 "
+
+[openstack]
+symbol = " "
+
+[os]
+[os.symbols]
+AIX = " "
+Alpaquita = "@ "
+AlmaLinux = " "
+Alpine = " "
+Amazon = " "
+Android = "󰀲 "
+Arch = "󰣇 "
+Artix = " "
+Bluefin = " "
+CachyOS = "@󰣇 "
+CentOS = "󱄚 "
+Debian = "󰣚 "
+DragonFly = "@󰣠 "
+Emscripten = ""
+EndeavourOS = " "
+Fedora = "󰣛 "
+FreeBSD = "󰣠 "
+Garuda = " "
+Gentoo = "󰣨 "
+HardenedBSD = "@󰣠 "
+Illumos = " "
+Kali = " "
+Linux = " "
+Mabox = "@󱘊 "
+Macos = "󰀵 "
+Manjaro = "󱘊 "
+Mariner = " "
+MidnightBSD = "@󰣠 "
+Mint = "󰣭 "
+NetBSD = " "
+NixOS = "󱄅 "
+Nobara = " "
+OpenBSD = " "
+OpenCloudOS = "@󱄚 "
+openEuler = "@󱄛 "
+openSUSE = " "
+OracleLinux = " "
+Pop = " "
+Raspbian = " "
+Redhat = "󱄛 "
+RedHatEnterprise = "󱄛 "
+RockyLinux = " "
+Redox = " "
+Solus = " "
+SUSE = " "
+Ubuntu = "󰕈 "
+Ultramarine = "@󰣛 "
+Unknown = ""
+Uos = "@ "
+Void = " "
+Windows = "󰖳 "
+
+[package]
+symbol = "󰏓 "
+
+[perl]
+symbol = " "
+
+[php]
+symbol = "󰌟 "
+
+[pijul_channel]
+symbol = "󰘬 "
+
+[pixi]
+symbol = "󰚩 "
+
+[pulumi]
+symbol = " "
+
+[purescript]
+symbol = " "
+
+[python]
+symbol = "󰌠 "
+
+[quarto]
+symbol = "󰐗 "
+
+[rlang]
+symbol = "󰟔 "
+
+[raku]
+symbol = "󱖉 "
+
+[red]
+symbol = "󱥒 "
+
+[ruby]
+symbol = "󰴭 "
+
+[rust]
+symbol = "󱘗 "
+
+[scala]
+symbol = " "
+
+[shell]
+
+[shlvl]
+symbol = "󱎁 "
+
+[singularity]
+symbol = "󰰣 "
+
+[solidity]
+symbol = " "
+
+[spack]
+symbol = " "
+
+[status]
+symbol = "󰽌 "
+not_executable_symbol = "󰱴 "
+not_found_symbol = "󱃞 "
+sigint_symbol = "󰱮 "
+signal_symbol = "󰱯 "
+
+[sudo]
+symbol = "󱕵 "
+
+[swift]
+symbol = "󰛥 "
+
+[terraform]
+symbol = "󱁢 "
+
+[time]
+use_12hr = true
+
+[typst]
+symbol = ""
+
+[username]
+
+[vagrant]
+symbol = ""
+
+[vlang]
+symbol = " "
+
+[vcsh]
+
+[zig]
+symbol = " "
+
+[custom]
