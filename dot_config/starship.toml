@@ -1,5 +1,5 @@
 format = "╭ $all╰ $jobs$character"
-continuation_prompt = " ╰ "
+continuation_prompt = "[  ╰ ](yellow)"
 add_newline = false
 
 [aws]
