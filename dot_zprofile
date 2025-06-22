@@ -1,2 +1,5 @@
 export GPG_TTY=$(tty)
 export ITERM_ENABLE_SHELL_INTEGRATION_WITH_TMUX=YES
+export POETRY_CACHE_DIR=~/.cache/pypoetry
+export POETRY_CONFIG_DIR=~/.config/pypoetry
+export POETRY_DATA_DIR=~/.local/share/pypoetry
