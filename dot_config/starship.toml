@@ -1,41 +1,43 @@
-format = "╭ $all╰ $battery$jobs$character"
-continuation_prompt = "[  ╰ ](yellow)"
 add_newline = false
+continuation_prompt = "[  ╰ ](bright-black) "
+format = '╭ $all╰ $jobs$character'
 
 [aws]
+expiration_symbol = ""
 symbol = "󰸏 "
-expiration_symbol = "󰌊 "
 
 [azure]
+disabled = false
 symbol = "󰠅 "
 
 [battery]
-full_symbol = "󰁹"
 charging_symbol = "󰂄"
-discharging_symbol = "󰂃"
-unknown_symbol = "󰂑"
+discharging_symbol = "󰂂"
 empty_symbol = "󰂎"
+full_symbol = "󰁹"
+unknown_symbol = "󰂑"
 [[battery.display]]
 threshold = 20
 
 [buf]
-symbol = "󱪿 "
+disabled = true
 
 [bun]
 symbol = " "
 
 [c]
-symbol = " "
+symbol = "󰙱 "
 
 [cpp]
-symbol = " "
+disabled = false
+symbol = "󰙲 "
 
 [character]
-success_symbol = "[󰋇](bold green)"
-error_symbol = "[󰋇](bold red)"
-vimcmd_symbol = "[](bold green)"
+error_symbol = "[󰧚](bold red)"
+success_symbol = "[󰧚](bold green)"
 vimcmd_replace_one_symbol = "[](bold purple)"
 vimcmd_replace_symbol = "[](bold purple)"
+vimcmd_symbol = "[](bold green)"
 vimcmd_visual_symbol = "[](bold yellow)"
 
 [cmake]
@@ -47,47 +49,40 @@ symbol = " "
 [cmd_duration]
 
 [conda]
-symbol = " "
 ignore_base = false
+symbol = " "
 
 [container]
-symbol = " "
+symbol = "󱣘 "
 
 [crystal]
-symbol = " "
+symbol = " "
 
 [daml]
-symbol = "󰅃 "
+disabled = true
 
 [dart]
-symbol = " "
+symbol = " "
 
 [deno]
 symbol = " "
 
 [directory]
-read_only = "[󰌾]"
+read_only = "[]"
 
 [direnv]
-allowed_msg = "󰈖"
-not_allowed_msg = "󰮘"
-denied_msg = "󰷆"
-loaded_msg = "󰝒"
-unloaded_msg = "󱪡"
 
 [docker_context]
 symbol = "󰡨 "
 
 [dotnet]
-format = "via [$symbol($version )( $tfm )]($style)"
-symbol = "󰪮 "
+disabled = true
 
 [elixir]
-format = "via [$symbol($version \\( $otp_version\\) )]($style)"
-symbol = " "
+symbol = " "
 
 [elm]
-symbol = " "
+symbol = " "
 
 [env_var]
 
@@ -98,10 +93,12 @@ symbol = " "
 symbol = " "
 
 [fill]
-symbol = "─"
+symbol = ""
+
+[fortran]
+symbol = "󱈚 "
 
 [fossil_branch]
-symbol = "󰘬 "
 
 [fossil_metrics]
 
@@ -110,31 +107,32 @@ symbol = "󱇶 "
 
 [git_branch]
 symbol = "󰘬 "
+truncation_symbol = ""
 
 [git_commit]
+tag_disabled = false
 tag_symbol = "󰓹 "
 
 [git_state]
+disabled = true
 
 [git_metrics]
 
 [git_status]
-format = "([\\[($all_status )$ahead_behind\\]]($style) )"
-conflicted = "󱒒"
 ahead = "󱦲"
 behind = "󱦳"
+conflicted = "󱒓"
+deleted = "󰍵 "
 diverged = "󰓢"
-up_to_date = "󰓦"
-untracked = "󰞋"
-stashed = "󱑢"
-modified = "󱗜"
-staged = "󰐖"
-renamed = "󰜵"
-deleted = "󰍵"
-typechanged = "󰀧"
+modified = "󱗜 "
+renamed = "󰑕 "
+staged = "󰐖 "
+stashed = "󰜯 "
+typechanged = "󰀧 "
+untracked = "󰎔 "
 
 [gleam]
-symbol = "󰦥 "
+disabled = true
 
 [golang]
 symbol = "󰟓 "
@@ -143,34 +141,35 @@ symbol = "󰟓 "
 symbol = " "
 
 [gradle]
-symbol = " "
+symbol = " "
 
 [haskell]
 symbol = "󰲒 "
 
 [haxe]
-symbol = " "
+symbol = " "
 
 [helm]
-symbol = ""
+symbol = " "
 
 [hostname]
 ssh_symbol = "󰣀 "
-trim_at = "" # `''` will disable any truncation.
+trim_at = ""
 
 [java]
 symbol = "󰬷 "
 
 [jobs]
-symbol = "󰎂 "
+symbol = " "
 
 [julia]
-symbol = " "
+symbol = " "
 
 [kotlin]
 symbol = "󱈙 "
 
 [kubernetes]
+disabled = false
 symbol = "󱃾 "
 
 [line_break]
@@ -178,141 +177,87 @@ symbol = "󱃾 "
 [localip]
 
 [lua]
-symbol = "󰢱 "
 lua_binary = "luajit"
+symbol = "󰢱 "
 
 [memory_usage]
-threshold = 80
-symbol = "󰍛 "
-disabled = false
 
 [meson]
-symbol = "󰯙 "
+disabled = true
 
 [hg_branch]
-symbol = "󰘬 "
+
+[hg_state]
 
 [mise]
 
 [mojo]
-symbol = "󰈸 "
+disabled = true
 
 [nats]
-symbol = "󰬕 "
+disabled = true
 
 [netns]
-symbol = "󰖩 "
+symbol = "󰛳 "
 
 [nim]
-symbol = " "
+symbol = " "
 
 [nix_shell]
-symbol = "󱄅 "
+symbol = " "
 
 [nodejs]
 symbol = "󰎙 "
 
 [ocaml]
-symbol = " "
+symbol = " "
 
 [odin]
-symbol = "󰟢 "
+disabled = true
 
 [opa]
-symbol = "󰥯 "
+disabled = true
 
 [openstack]
 symbol = " "
 
 [os]
 [os.symbols]
-AIX = " "
-Alpaquita = "@ "
-AlmaLinux = " "
-Alpine = " "
-Amazon = " "
-Android = "󰀲 "
-Arch = "󰣇 "
-Artix = " "
-Bluefin = " "
-CachyOS = "@󰣇 "
-CentOS = "󱄚 "
-Debian = "󰣚 "
-DragonFly = "@󰣠 "
-Emscripten = ""
-EndeavourOS = " "
-Fedora = "󰣛 "
-FreeBSD = "󰣠 "
-Garuda = " "
-Gentoo = "󰣨 "
-HardenedBSD = "@󰣠 "
-Illumos = " "
-Kali = " "
-Linux = " "
-Mabox = "@󱘊 "
-Macos = "󰀵 "
-Manjaro = "󱘊 "
-Mariner = " "
-MidnightBSD = "@󰣠 "
-Mint = "󰣭 "
-NetBSD = " "
-NixOS = "󱄅 "
-Nobara = " "
-OpenBSD = " "
-OpenCloudOS = "@󱄚 "
-openEuler = "@󱄛 "
-openSUSE = " "
-OracleLinux = " "
-Pop = " "
-Raspbian = " "
-Redhat = "󱄛 "
-RedHatEnterprise = "󱄛 "
-RockyLinux = " "
-Redox = " "
-Solus = " "
-SUSE = " "
-Ubuntu = "󰕈 "
-Ultramarine = "@󰣛 "
-Unknown = ""
-Uos = "@ "
-Void = " "
-Windows = "󰖳 "
 
 [package]
 symbol = "󰏓 "
 
 [perl]
-symbol = " "
+symbol = " "
 
 [php]
 symbol = "󰌟 "
 
 [pijul_channel]
-symbol = "󰘬 "
 
 [pixi]
-symbol = "󰚩 "
+symbol = "pixi "
 
 [pulumi]
 symbol = " "
 
 [purescript]
-symbol = " "
+symbol = " "
 
 [python]
 symbol = "󰌠 "
 
 [quarto]
-symbol = "󰐗 "
+disabled = true
 
 [rlang]
 symbol = "󰟔 "
 
 [raku]
-symbol = "󱖉 "
+disabled = true
 
 [red]
-symbol = "󱥒 "
+disabled = true
 
 [ruby]
 symbol = "󰴭 "
@@ -321,15 +266,13 @@ symbol = "󰴭 "
 symbol = "󱘗 "
 
 [scala]
-symbol = " "
+symbol = " "
 
 [shell]
 
 [shlvl]
-symbol = "󱎁 "
 
 [singularity]
-symbol = "󰰣 "
 
 [solidity]
 symbol = " "
@@ -338,14 +281,8 @@ symbol = " "
 symbol = " "
 
 [status]
-symbol = "󰽌 "
-not_executable_symbol = "󰱴 "
-not_found_symbol = "󱃞 "
-sigint_symbol = "󰱮 "
-signal_symbol = "󰱯 "
 
 [sudo]
-symbol = "󱕵 "
 
 [swift]
 symbol = "󰛥 "
@@ -354,22 +291,24 @@ symbol = "󰛥 "
 symbol = "󱁢 "
 
 [time]
-use_12hr = true
 
 [typst]
-symbol = ""
+symbol = " "
 
 [username]
 
 [vagrant]
-symbol = ""
+symbol = " "
 
 [vlang]
 symbol = " "
 
 [vcsh]
 
+[xmake]
+disabled = true
+
 [zig]
-symbol = " "
+symbol = " "
 
 [custom]
