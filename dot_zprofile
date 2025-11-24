@@ -1,5 +1,9 @@
 export GPG_TTY=$(tty)
 export ITERM_ENABLE_SHELL_INTEGRATION_WITH_TMUX=YES
-export POETRY_CACHE_DIR=~/.cache/pypoetry
-export POETRY_CONFIG_DIR=~/.config/pypoetry
-export POETRY_DATA_DIR=~/.local/share/pypoetry
+export TAPLO_CONFIG=$HOME/.config/taplo.toml
+
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Created by `pipx` on 2025-08-28 10:34:41
+export PATH="$PATH:/Users/akio/.local/bin"
