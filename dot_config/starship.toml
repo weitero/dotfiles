@@ -1,6 +1,8 @@
+"$schema" = "https://starship.rs/config-schema.json"
+
 add_newline = false
 continuation_prompt = "[  ╰ ](bright-black) "
-format = '╭ $all╰ $jobs$character'
+format = "╭ $all╰ $jobs$character"
 
 [aws]
 expiration_symbol = ""
