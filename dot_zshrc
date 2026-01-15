@@ -5,48 +5,45 @@ zinit light zdharma-continuum/zinit-annex-binary-symlink
 zinit light zsh-users/zsh-autosuggestions
 
 zinit wait lucid for \
-zdharma/history-search-multi-word \
-atload"bindkey '^[[A' history-substring-search-up;bindkey '^[[B' history-substring-search-down" zsh-users/zsh-history-substring-search 
-
+	zdharma/history-search-multi-word \
+	atload"bindkey '^[[A' history-substring-search-up;bindkey '^[[B' history-substring-search-down" zsh-users/zsh-history-substring-search
 
 zinit wait lucid for \
-OMZL::completion.zsh \
-OMZL::correction.zsh \
-OMZP::brew \
-OMZP::cp \
-OMZP::git \
-OMZP::pip \
-atload"export ZSH_TMUX_ITERM2=true" OMZP::tmux
-
+	OMZL::completion.zsh \
+	OMZL::correction.zsh \
+	OMZP::brew \
+	OMZP::cp \
+	OMZP::git \
+	OMZP::pip \
+	atload"export ZSH_TMUX_ITERM2=true" OMZP::tmux
 
 zinit ice from"gh-r" fbin"starship" \
-atclone"./starship init zsh > init.zsh; ./starship completions zsh > _starship" \
-atpull"%atclone" src"init.zsh"
+	atclone"./starship init zsh > init.zsh; ./starship completions zsh > _starship" \
+	atpull"%atclone" src"init.zsh"
 zinit light starship/starship
 
 zinit ice atload"unalias lsa l ll la"
 zinit snippet OMZL::directories.zsh
 
 zinit ice wait lucid \
-from'gh-r' bpick'FontPatcher.zip' sbin'font-patcher'  \
-atclone"sed -i '' '1s/python$/python3/' font-patcher" atpull"%atclone"
+	from'gh-r' bpick'FontPatcher.zip' sbin'font-patcher' \
+	atclone"sed -i '' '1s/python$/python3/' font-patcher" atpull"%atclone"
 zinit light ryanoasis/nerd-fonts
 
 zinit wait lucid atinit'zicompinit' for \
-zdharma/fast-syntax-highlighting \
+	zdharma/fast-syntax-highlighting
 
 zinit wait lucid \
-atclone"mkdir -p $ZPFX/bin" \
-atclone"./fzf --zsh |sed -n '/### completion/,/### end: completion/p' > _fzf_completion" \
-atclone"./fzf --zsh |sed -n '/### key-bindings/,/### end: key-bindings/p' > key-bindings.zsh" \
-atpull"%atclone" \
-from'gh-r' \
-lbin'!fzf' \
-src"key-bindings.zsh" \
-for @junegunn/fzf
+	atclone"mkdir -p $ZPFX/bin" \
+	atclone"./fzf --zsh |sed -n '/### completion/,/### end: completion/p' > _fzf_completion" \
+	atclone"./fzf --zsh |sed -n '/### key-bindings/,/### end: key-bindings/p' > key-bindings.zsh" \
+	atpull"%atclone" \
+	from'gh-r' \
+	lbin'!fzf' \
+	src"key-bindings.zsh" \
+	for @junegunn/fzf
 zinit ice as'completion'
 zinit snippet https://github.com/lmburns/dotfiles/blob/master/.config/zsh/completions/_fzf
-
 
 alias q='exit'
 alias vi='nvim'
