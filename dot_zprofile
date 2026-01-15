@@ -1,6 +1,5 @@
 export GPG_TTY=$(tty)
 export ITERM_ENABLE_SHELL_INTEGRATION_WITH_TMUX=YES
-export TAPLO_CONFIG=$HOME/.config/taplo.toml
 
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
