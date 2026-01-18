@@ -16,6 +16,7 @@ Notable bits:
 - Zsh config: `dot_zshrc`, `dot_zprofile`
 - tmux config: `dot_tmux.conf`
 - Zim config: `dot_zimrc`
+- Homebrew env: `dot_homebrew/brew.env`
 - Tooling config: `dot_config/mise/config.toml`, `dot_config/starship.toml`,
   `dot_config/pip/pip.conf`
 
@@ -33,6 +34,12 @@ Optional (recommended):
 ## Bootstrap / install on a new machine
 
 1. Install chezmoi.
+
+   On macOS via Homebrew:
+
+   ```sh
+   brew install chezmoi
+   ```
 
 2. Initialize and apply:
 
@@ -72,6 +79,11 @@ Pull upstream updates and apply:
 ```sh
 chezmoi update
 ```
+
+## Homebrew (`brew.env`)
+
+Homebrew-related environment variables live in `~/.homebrew/brew.env` (tracked
+here as `dot_homebrew/brew.env`).
 
 ## Zsh modules (zimfw)
 
