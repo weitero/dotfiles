@@ -1,0 +1,54 @@
+#
+# This is not sourced during shell startup and is only used to configure zimfw.
+#
+
+#
+# Modules
+#
+
+zmodule environment # Sets sane Zsh built-in environment options.
+zmodule input # Applies correct bindkeys for input events.
+
+#
+# Completion
+#
+
+# Additional completion definitions for Zsh.
+zmodule zsh-users/zsh-completions --fpath src
+# Enables and configures smart and extensive tab completion, must be sourced
+# after all modules that add completion definitions.
+zmodule completion
+
+# <-- Normally new modules should be added here. Check each module documentation
+# for any caveats.
+zmodule archive # Provides functions for easy archive manipulation.
+zmodule fzf # Configures fzf for faster fetching of files and directories names.
+zmodule smite # Makes it easier to opt-out of typos and dead ends in your shell history.
+
+zmodule ohmyzsh/ohmyzsh --root plugins/brew
+zmodule ohmyzsh/ohmyzsh --root plugins/cp
+zmodule ohmyzsh/ohmyzsh --root plugins/git
+zmodule ohmyzsh/ohmyzsh --root plugins/pip
+zmodule ohmyzsh/ohmyzsh --root plugins/tmux --cmd 'export ZSH_TMUX_ITERM2=true'
+zmodule ohmyzsh/ohmyzsh --source lib/directories.zsh --cmd 'unalias lsa l ll la'
+
+#
+# Prompt
+#
+
+zmodule asciiship # A heavily reduced, ASCII-only version of the Spaceship and Starship prompts.
+zmodule duration-info # Exposes how long the last command took to run to prompts.
+zmodule git-info # Exposes git repository status information to prompts.
+zmodule prompt-pwd # Formats the current working directory to be used by prompts.
+
+#
+# Modules that must be initialized last
+#
+
+# Fish-like syntax highlighting for Zsh, must be sourced after completion.
+zmodule zsh-users/zsh-syntax-highlighting
+# Fish-like history search for Zsh, must be sourced after zsh-users/zsh-syntax-highlighting.
+zmodule zsh-users/zsh-history-substring-search
+# Fish-like autosuggestions for Zsh.
+# Add the following to your ~/.zshrc to boost performance: ZSH_AUTOSUGGEST_MANUAL_REBIND=1
+zmodule zsh-users/zsh-autosuggestions
