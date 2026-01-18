@@ -1,0 +1,2 @@
+[tools]
+"github:ryanoasis/nerd-fonts" = { version = "latest", asset_pattern = "FontPatcher.zip", bin_path = ".", postinstall = "sed -i '' '1s/python$/python3/' $MISE_TOOL_INSTALL_PATH/font-patcher" }
