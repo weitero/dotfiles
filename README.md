@@ -1,115 +1,73 @@
 # dotfiles
 
-Personal configuration managed with:
+Personal dotfiles managed with:
 
-- [chezmoi](https://www.chezmoi.io/): tracks and applies all dotfiles
-- [zimfw](https://zimfw.sh/): manages Zsh modules
-- [mise](https://mise.jdx.dev/): manages CLI tools (e.g. `font-patcher`)
+- [chezmoi](https://www.chezmoi.io/) (dotfile tracking + templating)
+- [zimfw](https://zimfw.sh/) (Zsh module manager)
+- [mise](https://mise.jdx.dev/) (CLI tool versions)
 
-## What’s in here
+This setup is primarily for macOS + Zsh + Homebrew.
 
-This is a chezmoi source directory. Files are stored in a chezmoi-friendly form
-(e.g. `dot_zshrc` maps to `~/.zshrc`, `dot_config/*` maps to `~/.config/*`).
+## Quick start
 
-Notable bits:
-
-- Zsh config: `dot_zshrc`, `dot_zprofile`
-- tmux config: `dot_tmux.conf`
-- Zim config: `dot_zimrc`
-- Homebrew env: `dot_homebrew/brew.env`
-- Tooling config: `dot_config/mise/config.toml`, `dot_config/starship.toml`,
-  `dot_config/pip/pip.conf`
-
-## Prerequisites
-
-- chezmoi
-- Git
-- Zsh
-
-Optional (recommended):
-
-- zimfw
-- mise
-
-## Bootstrap / install on a new machine
-
-1. Install chezmoi.
-
-   On macOS via Homebrew:
-
-   ```sh
-   brew install chezmoi
-   ```
-
-2. Initialize and apply:
+Install chezmoi (macOS):
 
 ```sh
-chezmoi init --apply <your-git-remote>
+brew install chezmoi
 ```
 
-If you already have the repo locally:
+Initialize (no changes yet), review, then apply:
 
 ```sh
+chezmoi init <your-git-remote>
+chezmoi diff
 chezmoi apply
 ```
 
-## Day-to-day usage
+Update to the latest repo state:
 
-Edit files via chezmoi so templates/attributes stay consistent:
+```sh
+chezmoi update
+```
+
+## Daily workflow
+
+Edit through chezmoi so attributes/templates stay consistent:
 
 ```sh
 chezmoi edit ~/.zshrc
 chezmoi edit ~/.config/mise/config.toml
 ```
 
-See what would change:
+Preview changes at any time:
 
 ```sh
 chezmoi diff
 ```
 
-Apply changes:
+## What’s included
 
-```sh
-chezmoi apply
-```
+- Shell: Zsh config (`~/.zshrc`, `~/.zprofile`) + zimfw modules (`~/.zimrc`)
+- Prompt: Starship config (`~/.config/starship.toml`)
+- tmux: minimal config with iTerm2 integration (`~/.tmux.conf`)
+- Homebrew: environment defaults (`~/.homebrew/brew.env`)
+- Tooling configs: Biome, Ruff, sqlfluff, stylua, rustfmt, yamlfmt/yamlfix, sqls, tombi
+- Writing tools: Vale configuration under `~/Library/Application Support/...` (chezmoi `private_` paths)
+- mise: manages utility tools (e.g. Nerd Fonts `font-patcher`)
 
-Pull upstream updates and apply:
+## Repo layout (chezmoi conventions)
 
-```sh
-chezmoi update
-```
+- `dot_*` → `.*` in `$HOME` (e.g. `dot_zshrc` → `~/.zshrc`)
+- `dot_config/*` → `~/.config/*`
+- `private_*` → paths marked “private” by chezmoi (e.g. `~/Library/...`)
+- `empty_*` → empty files (e.g. `empty_dot_hushlogin` → `~/.hushlogin`)
 
-## Homebrew (`brew.env`)
+## Notes / safety
 
-Homebrew-related environment variables live in `~/.homebrew/brew.env` (tracked
-here as `dot_homebrew/brew.env`).
-
-## Zsh modules (zimfw)
-
-Zim is configured via `~/.zimrc`.
-
-Common commands:
-
-```sh
-zimfw install
-zimfw update
-```
-
-## Tool management (mise)
-
-mise configuration lives in `~/.config/mise/config.toml`.
-
-Typical flow:
-
-```sh
-mise install
-mise list
-```
-
-If `font-patcher` (or other tools) are defined in mise, this repo expects mise
-to provide them.
+- Don’t apply blindly on a machine you care about—always check `chezmoi diff` first.
+- This repo assumes Homebrew under `/opt/homebrew` and zimfw installed via Homebrew.
+- Some configs reference external plugins/tools (e.g. tmux theme/plugins) that you may need to install separately.
 
 ## License
 
-See LICENSE.
+MIT — see LICENSE.
