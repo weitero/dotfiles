@@ -1,0 +1,5 @@
+# tombi: format.rules.table-keys-order = "version-sort"
+
+# Use incremental resolution of project-wide references.
+# This is much more efficient but is currently experimental
+incremental_references = true
