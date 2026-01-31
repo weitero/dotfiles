@@ -7,7 +7,7 @@
 #
 
 zmodule environment # Sets sane Zsh built-in environment options.
-zmodule input # Applies correct bindkeys for input events.
+zmodule input       # Applies correct bindkeys for input events.
 
 #
 # Completion
@@ -22,8 +22,8 @@ zmodule completion
 # <-- Normally new modules should be added here. Check each module documentation
 # for any caveats.
 zmodule archive # Provides functions for easy archive manipulation.
-zmodule fzf # Configures fzf for faster fetching of files and directories names.
-zmodule smite # Makes it easier to opt-out of typos and dead ends in your shell history.
+zmodule fzf     # Configures fzf for faster fetching of files and directories names.
+zmodule smite   # Makes it easier to opt-out of typos and dead ends in your shell history.
 
 zmodule ohmyzsh/ohmyzsh --root plugins/brew
 zmodule ohmyzsh/ohmyzsh --root plugins/cp
@@ -36,10 +36,10 @@ zmodule ohmyzsh/ohmyzsh --source lib/directories.zsh --cmd 'unalias lsa l ll la'
 # Prompt
 #
 
-zmodule asciiship # A heavily reduced, ASCII-only version of the Spaceship and Starship prompts.
+zmodule asciiship     # A heavily reduced, ASCII-only version of the Spaceship and Starship prompts.
 zmodule duration-info # Exposes how long the last command took to run to prompts.
-zmodule git-info # Exposes git repository status information to prompts.
-zmodule prompt-pwd # Formats the current working directory to be used by prompts.
+zmodule git-info      # Exposes git repository status information to prompts.
+zmodule prompt-pwd    # Formats the current working directory to be used by prompts.
 
 #
 # Modules that must be initialized last
