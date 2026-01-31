@@ -19,7 +19,6 @@
   "line_break_after_multiline_tag": true,
   "max_attribute_length": 10,
   "max_blank_lines": 1,
-  "max_line_length": 120,
   "no_line_after_yaml": false,
   "preserve_blank_lines": false,
   "preserve_leading_space": false,
