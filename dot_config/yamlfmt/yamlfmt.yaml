@@ -1,0 +1,9 @@
+---
+# yaml-language-server:$schema=https://raw.githubusercontent.com/google/yamlfmt/refs/heads/main/schema.json
+formatter:
+  eof_newline: true
+  include_document_start: true # yamlfix: explicit_start
+  pad_line_comments: 2 # yamlfix: comments_min_spaces_from_content
+  retain_line_breaks: true
+  trim_trailing_whitespace: true
+  type: basic

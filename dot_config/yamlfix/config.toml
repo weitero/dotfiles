@@ -1,0 +1,5 @@
+# tombi: format.rules.table-keys-order = "version-sort"
+
+indent_sequence = 4  # yamlfmt: array_indent
+section_whitelines = 1
+whitelines = 1
