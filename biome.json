@@ -1,0 +1,55 @@
+{
+  "assist": {
+    "actions": {
+      "recommended": true
+    }
+  },
+  "css": {
+    "formatter": {
+      "enabled": true,
+      "indentStyle": "space",
+      "quoteStyle": "single"
+    },
+    "parser": {
+      "cssModules": true,
+      "tailwindDirectives": true
+    }
+  },
+  "files": {
+    "ignoreUnknown": true
+  },
+  "formatter": {
+    "indentStyle": "space"
+  },
+  "html": {
+    "experimentalFullSupportEnabled": true,
+    "formatter": {
+      "enabled": true,
+      "indentScriptAndStyle": true,
+      "indentStyle": "space",
+      "selfCloseVoidElements": "always"
+    },
+    "parser": {
+      "interpolation": true
+    }
+  },
+  "javascript": {
+    "formatter": {
+      "indentStyle": "space",
+      "operatorLinebreak": "before",
+      "quoteStyle": "single"
+    },
+    "parser": {
+      "jsxEverywhere": false
+    }
+  },
+  "json": {
+    "formatter": {
+      "indentStyle": "space"
+    },
+    "parser": {
+      "allowComments": true,
+      "allowTrailingCommas": true
+    }
+  }
+}
