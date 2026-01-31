@@ -1,0 +1,5 @@
+# tombi: format.rules.table-keys-order = "version-sort"
+
+edition = "2024"
+match_block_trailing_comma = true
+use_field_init_shorthand = true
