@@ -36,10 +36,10 @@ zmodule ohmyzsh/ohmyzsh --source lib/directories.zsh --cmd 'unalias lsa l ll la'
 # Prompt
 #
 
-zmodule asciiship     # A heavily reduced, ASCII-only version of the Spaceship and Starship prompts.
-zmodule duration-info # Exposes how long the last command took to run to prompts.
-zmodule git-info      # Exposes git repository status information to prompts.
-zmodule prompt-pwd    # Formats the current working directory to be used by prompts.
+# zmodule asciiship     # A heavily reduced, ASCII-only version of the Spaceship and Starship prompts.
+# zmodule duration-info # Exposes how long the last command took to run to prompts.
+# zmodule git-info      # Exposes git repository status information to prompts.
+# zmodule prompt-pwd    # Formats the current working directory to be used by prompts.
 
 #
 # Modules that must be initialized last
