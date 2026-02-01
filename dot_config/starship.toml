@@ -2,8 +2,8 @@
 
 "$schema" = "https://starship.rs/config-schema.json"
 add_newline = false
-continuation_prompt = "[  ╰ ](bright-black) "
-format = "╭ $all╰ $jobs$character"
+continuation_prompt = "quote> "
+format = "$all$jobs$status$character"
 
 [aws]
 expiration_symbol = ""
@@ -33,8 +33,8 @@ symbol = " "
 symbol = "󰙱 "
 
 [character]
-error_symbol = "[󰧚](bold red)"
-success_symbol = "[󰧚](bold green)"
+error_symbol = "[%](bold red)"
+success_symbol = "[%](bold green)"
 vimcmd_replace_one_symbol = "[](bold purple)"
 vimcmd_replace_symbol = "[](bold purple)"
 vimcmd_symbol = "[](bold green)"
@@ -75,6 +75,8 @@ symbol = " "
 
 [directory]
 read_only = "[]"
+truncate_to_repo = false
+truncation_length = 0
 
 [direnv]
 
@@ -170,7 +172,7 @@ trim_at = ""
 symbol = "󰬷 "
 
 [jobs]
-symbol = " "
+symbol = "*"
 
 [julia]
 symbol = " "
@@ -287,6 +289,14 @@ symbol = " "
 symbol = " "
 
 [status]
+disabled = false
+format = "[$symbol$status\\($common_meaning$signal_name\\)]($style) "
+not_executable_symbol = ""
+not_found_symbol = ""
+sigint_symbol = ""
+signal_symbol = ""
+success_symbol = ""
+symbol = ""
 
 [sudo]
 
