@@ -1,0 +1,6 @@
+# tombi: format.rules.table-keys-order = "version-sort"
+
+[".config/bat/themes"]
+refreshPeriod = "168h"
+type = "git-repo"
+url = "https://github.com/catppuccin/bat.git"
