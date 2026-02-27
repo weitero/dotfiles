@@ -6,7 +6,6 @@ type = "git-repo"
 url = "https://github.com/catppuccin/bat.git"
 
 [".config/ghostty/themes"]
-exact = true
 include = [ "*/themes/**" ]
 refreshPeriod = "168h"
 stripComponents = 2
@@ -19,9 +18,15 @@ type = "git-repo"
 url = "https://github.com/catppuccin/tmux.git"
 
 ["Library/Application Support/Godot/text_editor_themes"]
-exact = true
 include = [ "*/themes/**" ]
 refreshPeriod = "168h"
 stripComponents = 2
 type = "archive"
 url = "https://github.com/catppuccin/godot/archive/refs/heads/main.zip"
+
+["Library/Developer/Xcode/UserData/FontAndColorThemes"]
+include = [ "*/themes/**" ]
+refreshPeriod = "168h"
+stripComponents = 2
+type = "archive"
+url = "https://github.com/catppuccin/xcode/archive/refs/heads/main.zip"
