@@ -5,4 +5,4 @@ cursor-style = block
 font-family = SFMono Nerd Font
 macos-option-as-alt = right
 shell-integration-features = no-cursor
-theme = dark:Catppuccin Mocha,light:Catppuccin Latte
+theme = dark:catppuccin-mocha.conf,light:catppuccin-latte.conf
