@@ -52,6 +52,7 @@ chezmoi diff
 - tmux: minimal config with iTerm2 integration (`~/.tmux.conf`)
 - Homebrew: environment defaults (`~/.homebrew/brew.env`)
 - Tooling configs: Biome, Ruff, sqlfluff, stylua, rustfmt, yamlfmt/yamlfix, sqls, tombi
+- Themes: Catppuccin themes/plugins for bat, Ghostty, and tmux (managed via `.chezmoiexternal.toml`, refreshed weekly); optional Godot + Xcode themes on macOS
 - Writing tools: Vale configuration under `~/Library/Application Support/...` (chezmoi `private_` paths)
 - mise: manages utility tools (e.g. Nerd Fonts `font-patcher`)
 
@@ -66,7 +67,7 @@ chezmoi diff
 
 - Don’t apply blindly on a machine you care about—always check `chezmoi diff` first.
 - This repo assumes Homebrew under `/opt/homebrew` and zimfw installed via Homebrew.
-- Some configs reference external plugins/tools (e.g. tmux theme/plugins) that you may need to install separately.
+- Some configs reference external plugins/tools; Catppuccin themes are managed via `.chezmoiexternal.toml`, but other plugins/tools may need to be installed separately.
 
 ## License
 
