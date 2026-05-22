@@ -1,12 +1,19 @@
+adjust-cursor-thickness = 300%
 auto-update = off
 background-blur = true
 background-opacity = 0.85
 clipboard-paste-protection = true
 cursor-style = block
-font-family = SFMono Nerd Font
+custom-shader = ~/.config/ghostty/shaders/cursor_smear.glsl
+font-family = Spleen8x16 Nerd Font
+font-family = Twitter Color Emoji
+font-size = 16
 keybind = global:cmd+backquote=toggle_quick_terminal
+macos-icon = retro
 macos-option-as-alt = right
 quick-terminal-autohide = true
-quick-terminal-position = top
+quick-terminal-position = right
+quick-terminal-size = 34%,100%
 shell-integration-features = no-cursor
 theme = dark:catppuccin-mocha.conf,light:catppuccin-latte.conf
+window-save-state = never
