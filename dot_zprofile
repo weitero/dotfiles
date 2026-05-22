@@ -2,9 +2,9 @@ export GPG_TTY=$(tty)
 export ITERM_ENABLE_SHELL_INTEGRATION_WITH_TMUX=YES
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
+eval "$(mise activate zsh)"
+eval $(perl -I ~/perl5/lib/perl5/ -Mlocal::lib)
 
-# Created by `pipx` on 2025-08-28 10:34:41
-export PATH="$PATH:/Users/akio/.local/bin"
-
-# Added by Obsidian
-export PATH="$PATH:/Applications/Obsidian.app/Contents/MacOS"
+export NODE_PATH="$(mise exec -- npm root -g):$NODE_PATH"
+export PATH="$PATH:/Applications/Obsidian.app/Contents/MacOS" # Added by Obsidian
+export PATH="/Users/akio/.antigravity/antigravity/bin:$PATH" # Added by Antigravity

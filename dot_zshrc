@@ -35,3 +35,4 @@ alias kurl='curl -LZJOR --compressed'
 alias les='less -FgiJmNsSw --incsearch --mouse --use-color'
 
 alias chrome='open -n -a "Google Chrome" --args --variations-override-country=us'
+
