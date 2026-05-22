@@ -6,22 +6,16 @@ continuation_prompt = "quote> "
 format = "$all$jobs$status$character"
 
 [aws]
-expiration_symbol = ""
+expiration_symbol = "🚫"
 symbol = "󰸏 "
 
 [azure]
-disabled = false
 symbol = "󰠅 "
 
 [battery]
-charging_symbol = "󰂄"
-discharging_symbol = "󰂂"
-empty_symbol = "󰂎"
-full_symbol = "󰁹"
-unknown_symbol = "󰂑"
+disabled = true
 
 [[battery.display]]
-threshold = 20
 
 [buf]
 disabled = true
@@ -30,15 +24,15 @@ disabled = true
 symbol = " "
 
 [c]
-symbol = "󰙱 "
+symbol = "󰙱"
 
 [character]
-error_symbol = "[%](bold red)"
-success_symbol = "[%](bold green)"
-vimcmd_replace_one_symbol = "[](bold purple)"
-vimcmd_replace_symbol = "[](bold purple)"
-vimcmd_symbol = "[](bold green)"
-vimcmd_visual_symbol = "[](bold yellow)"
+error_symbol = "[➞](bold red)"
+success_symbol = "[➞](bold green)"
+vimcmd_replace_one_symbol = "[ ](bold purple)"
+vimcmd_replace_symbol = "[ ](bold purple)"
+vimcmd_symbol = "[ ](bold green)"
+vimcmd_visual_symbol = "[ ](bold yellow)"
 
 [cmake]
 symbol = " "
@@ -46,14 +40,15 @@ symbol = " "
 [cmd_duration]
 
 [cobol]
-symbol = " "
+disabled = true
 
 [conda]
 ignore_base = false
 symbol = " "
+truncation_length = 0
 
 [container]
-symbol = "󱣘 "
+symbol = "🫙"
 
 [cpp]
 disabled = false
@@ -74,7 +69,7 @@ symbol = " "
 symbol = " "
 
 [directory]
-read_only = "[]"
+read_only = "🔏"
 truncate_to_repo = false
 truncation_length = 0
 
@@ -84,7 +79,8 @@ truncation_length = 0
 symbol = "󰡨 "
 
 [dotnet]
-disabled = true
+format = "via [$symbol($version )($tfm )]($style)"
+symbol = "󰪮 "
 
 [elixir]
 symbol = " "
@@ -114,30 +110,31 @@ symbol = "󱈚 "
 symbol = "󱇶 "
 
 [git_branch]
-symbol = "󰘬 "
+always_show_remote = true
+symbol = "🌱"
 truncation_symbol = ""
 
 [git_commit]
 tag_disabled = false
-tag_symbol = "󰓹 "
+tag_symbol = "🏷️"
 
 [git_metrics]
 
 [git_state]
-disabled = true
 
 [git_status]
-ahead = "󱦲"
-behind = "󱦳"
-conflicted = "󱒓"
-deleted = "󰍵 "
-diverged = "󰓢"
-modified = "󱗜 "
-renamed = "󰑕 "
-staged = "󰐖 "
-stashed = "󰜯 "
-typechanged = "󰀧 "
-untracked = "󰎔 "
+ahead = "^"
+behind = "v"
+conflicted = "x"
+deleted = "-"
+diverged = "%"
+modified = "*"
+renamed = ">"
+staged = "+"
+stashed = "$"
+typechanged = "<"
+untracked = "?"
+up_to_date = ";"
 
 [gleam]
 disabled = true
@@ -165,14 +162,14 @@ symbol = " "
 [hg_state]
 
 [hostname]
-ssh_symbol = "󰣀 "
+ssh_symbol = ""
 trim_at = ""
 
 [java]
 symbol = "󰬷 "
 
 [jobs]
-symbol = "*"
+symbol = "✳️"
 
 [julia]
 symbol = " "
@@ -181,7 +178,6 @@ symbol = " "
 symbol = "󱈙 "
 
 [kubernetes]
-disabled = false
 symbol = "󱃾 "
 
 [line_break]
@@ -192,12 +188,19 @@ symbol = "󱃾 "
 lua_binary = "luajit"
 symbol = "󰢱 "
 
+[maven]
+symbol = " "
+
 [memory_usage]
 
 [meson]
 disabled = true
 
 [mise]
+disabled = false
+healthy_symbol = "⚕️"
+symbol = ""
+unhealthy_symbol = "🦠"
 
 [mojo]
 disabled = true
@@ -206,18 +209,20 @@ disabled = true
 disabled = true
 
 [netns]
-symbol = "󰛳 "
+disabled = true
 
 [nim]
 symbol = " "
 
 [nix_shell]
-symbol = " "
+symbol = "󱄅 "
 
 [nodejs]
 symbol = "󰎙 "
 
 [ocaml]
+global_switch_indicator = "🌎"
+local_switch_indicator = "🪧"
 symbol = " "
 
 [odin]
@@ -233,7 +238,7 @@ symbol = " "
 [os.symbols]
 
 [package]
-symbol = "󰏓 "
+symbol = "📦"
 
 [perl]
 symbol = " "
@@ -244,7 +249,7 @@ symbol = "󰌟 "
 [pijul_channel]
 
 [pixi]
-symbol = "pixi "
+disabled = true
 
 [pulumi]
 symbol = " "
@@ -279,6 +284,8 @@ symbol = " "
 [shell]
 
 [shlvl]
+disabled = false
+symbol = "🎚️ "
 
 [singularity]
 
@@ -291,12 +298,14 @@ symbol = " "
 [status]
 disabled = false
 format = "[$symbol$status(\\($common_meaning$signal_name\\))]($style) "
-not_executable_symbol = ""
-not_found_symbol = ""
-sigint_symbol = ""
-signal_symbol = ""
+not_executable_symbol = "noexec"
+not_found_symbol = "notfound"
+pipestatus = true
+pipestatus_format = "\\[$pipestatus\\] => [$symbol$status(\\($common_meaning$signal_name\\))]($style) "
+sigint_symbol = "sigint"
+signal_symbol = "sig"
 success_symbol = ""
-symbol = ""
+symbol = "[❌](bold red) "
 
 [sudo]
 
@@ -315,6 +324,8 @@ symbol = " "
 
 [vagrant]
 symbol = " "
+
+[vcs]
 
 [vcsh]
 
