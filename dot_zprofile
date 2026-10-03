@@ -1,10 +1,5 @@
-export GPG_TTY=$(tty)
-export ITERM_ENABLE_SHELL_INTEGRATION_WITH_TMUX=YES
-
 eval "$(/opt/homebrew/bin/brew shellenv)"
-eval "$(mise activate zsh)"
-eval $(perl -I ~/perl5/lib/perl5/ -Mlocal::lib)
-
-export NODE_PATH="$(mise exec -- npm root -g):$NODE_PATH"
+export GOOGLE_GENAI_USE_ENTERPRISE=FALSE
+export GPG_TTY=$(tty)
 export PATH="$PATH:/Applications/Obsidian.app/Contents/MacOS" # Added by Obsidian
-export PATH="/Users/akio/.antigravity/antigravity/bin:$PATH" # Added by Antigravity
+export PATH=$PATH:$HOME/go/bin
