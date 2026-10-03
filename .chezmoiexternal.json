@@ -1,0 +1,38 @@
+{
+  ".config/bat/themes": {
+    "include": [
+      "*/themes/**"
+    ],
+    "refreshPeriod": "168h",
+    "stripComponents": 2,
+    "type": "archive",
+    "url": "https://github.com/catppuccin/bat/archive/refs/heads/main.zip"
+  },
+  ".config/ghostty/shaders": {
+    "include": [
+      "*/public/shaders/**"
+    ],
+    "refreshPeriod": "168h",
+    "stripComponents": 2,
+    "type": "archive",
+    "url": "https://github.com/KroneCorylus/ghostty-shader-playground/archive/refs/heads/main.zip"
+  },
+  ".config/ghostty/themes": {
+    "include": [
+      "*/themes/**"
+    ],
+    "refreshPeriod": "168h",
+    "stripComponents": 2,
+    "type": "archive",
+    "url": "https://github.com/catppuccin/ghostty/archive/refs/heads/main.zip"
+  },
+  "Library/Developer/Xcode/UserData/FontAndColorThemes": {
+    "include": [
+      "*/themes/**"
+    ],
+    "refreshPeriod": "168h",
+    "stripComponents": 2,
+    "type": "archive",
+    "url": "https://github.com/catppuccin/xcode/archive/refs/heads/main.zip"
+  }
+}
