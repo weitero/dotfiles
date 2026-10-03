@@ -1,4 +1,4 @@
-# tombi: format.rules.table-keys-order = "version-sort"
+# tombi: format.rules.table-keys-order = "ascending"
 
 [".config/bat/themes"]
 refreshPeriod = "168h"
@@ -16,13 +16,6 @@ url = "https://github.com/catppuccin/ghostty/archive/refs/heads/main.zip"
 refreshPeriod = "168h"
 type = "git-repo"
 url = "https://github.com/catppuccin/tmux.git"
-
-["Library/Application Support/Godot/text_editor_themes"]
-include = [ "*/themes/**" ]
-refreshPeriod = "168h"
-stripComponents = 2
-type = "archive"
-url = "https://github.com/catppuccin/godot/archive/refs/heads/main.zip"
 
 ["Library/Developer/Xcode/UserData/FontAndColorThemes"]
 include = [ "*/themes/**" ]
