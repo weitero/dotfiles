@@ -41,7 +41,7 @@ staged = "+"
 stashed = "$"
 typechanged = "<"
 untracked = "?"
-up_to_date = ";"
+up_to_date = "."
 
 [golang]
 symbol = "🐹"
