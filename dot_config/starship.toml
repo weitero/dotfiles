@@ -60,7 +60,9 @@ symbol = "☕️"
 [jobs]
 symbol = "✳️"
 
+# tombi: format.rules.table-keys-order = "ascending"
 [lua]
+lua_binary = "luajit"
 symbol = "🌕"
 
 # tombi: format.rules.table-keys-order = "ascending"
