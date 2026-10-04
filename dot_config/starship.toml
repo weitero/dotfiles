@@ -1,127 +1,34 @@
-# tombi: format.rules.table-keys-order = "version-sort"
+# tombi: format.rules.table-keys-order = "ascending"
 
 "$schema" = "https://starship.rs/config-schema.json"
 add_newline = false
-continuation_prompt = "quote> "
-format = "$all$jobs$status$character"
-
-[aws]
-expiration_symbol = "🚫"
-symbol = "󰸏 "
-
-[azure]
-symbol = "󰠅 "
-
-[battery]
-disabled = true
-
-[[battery.display]]
-
-[buf]
-disabled = true
-
-[bun]
-symbol = " "
 
 [c]
-symbol = "󰙱"
-
-[character]
-error_symbol = "[➞](bold red)"
-success_symbol = "[➞](bold green)"
-vimcmd_replace_one_symbol = "[ ](bold purple)"
-vimcmd_replace_symbol = "[ ](bold purple)"
-vimcmd_symbol = "[ ](bold green)"
-vimcmd_visual_symbol = "[ ](bold yellow)"
-
-[cmake]
-symbol = " "
-
-[cmd_duration]
-
-[cobol]
-disabled = true
-
-[conda]
-ignore_base = false
-symbol = " "
-truncation_length = 0
+symbol = "🥐"
 
 [container]
-symbol = "🫙"
+symbol = "🏺"
 
 [cpp]
 disabled = false
-symbol = "󰙲 "
-
-[crystal]
-symbol = " "
-
-[custom]
-
-[daml]
-disabled = true
-
-[dart]
-symbol = " "
-
-[deno]
-symbol = " "
+symbol = "🥐"
 
 [directory]
 read_only = "🔏"
-truncate_to_repo = false
-truncation_length = 0
-
-[direnv]
 
 [docker_context]
-symbol = "󰡨 "
-
-[dotnet]
-format = "via [$symbol($version )($tfm )]($style)"
-symbol = "󰪮 "
-
-[elixir]
-symbol = " "
-
-[elm]
-symbol = " "
-
-[env_var]
-
-[erlang]
-symbol = " "
-
-[fennel]
-symbol = " "
+symbol = "🐳"
 
 [fill]
 symbol = ""
 
-[fortran]
-symbol = "󱈚 "
-
-[fossil_branch]
-
-[fossil_metrics]
-
 [gcloud]
-symbol = "󱇶 "
+symbol = "☁️"
 
 [git_branch]
-always_show_remote = true
-symbol = "🌱"
-truncation_symbol = ""
+symbol = "🌵"
 
-[git_commit]
-tag_disabled = false
-tag_symbol = "🏷️"
-
-[git_metrics]
-
-[git_state]
-
+# tombi: format.rules.table-keys-order = "ascending"
 [git_status]
 ahead = "^"
 behind = "v"
@@ -136,204 +43,42 @@ typechanged = "<"
 untracked = "?"
 up_to_date = ";"
 
-[gleam]
-disabled = true
-
 [golang]
-symbol = "󰟓 "
+symbol = "🐹"
 
 [gradle]
-symbol = " "
-
-[guix_shell]
-symbol = " "
-
-[haskell]
-symbol = "󰲒 "
-
-[haxe]
-symbol = " "
-
-[helm]
-symbol = " "
-
-[hg_branch]
-
-[hg_state]
-
-[hostname]
-ssh_symbol = ""
-trim_at = ""
+symbol = "🐘"
 
 [java]
-symbol = "󰬷 "
+symbol = "☕️"
 
 [jobs]
 symbol = "✳️"
 
-[julia]
-symbol = " "
-
-[kotlin]
-symbol = "󱈙 "
-
-[kubernetes]
-symbol = "󱃾 "
-
-[line_break]
-
-[localip]
-
 [lua]
-lua_binary = "luajit"
-symbol = "󰢱 "
+symbol = "🌕"
 
-[maven]
-symbol = " "
-
-[memory_usage]
-
-[meson]
-disabled = true
-
+# tombi: format.rules.table-keys-order = "ascending"
 [mise]
 disabled = false
-healthy_symbol = "⚕️"
-symbol = ""
-unhealthy_symbol = "🦠"
-
-[mojo]
-disabled = true
-
-[nats]
-disabled = true
-
-[netns]
-disabled = true
-
-[nim]
-symbol = " "
-
-[nix_shell]
-symbol = "󱄅 "
+symbol = "🥗"
 
 [nodejs]
-symbol = "󰎙 "
-
-[ocaml]
-global_switch_indicator = "🌎"
-local_switch_indicator = "🪧"
-symbol = " "
-
-[odin]
-disabled = true
-
-[opa]
-disabled = true
-
-[openstack]
-symbol = " "
-
-[os]
-[os.symbols]
+symbol = "🟩"
 
 [package]
 symbol = "📦"
 
-[perl]
-symbol = " "
-
-[php]
-symbol = "󰌟 "
-
-[pijul_channel]
-
-[pixi]
-disabled = true
-
-[pulumi]
-symbol = " "
-
-[purescript]
-symbol = " "
-
 [python]
-symbol = "󰌠 "
-
-[quarto]
-disabled = true
-
-[raku]
-disabled = true
-
-[red]
-disabled = true
+symbol = "🐍"
 
 [rlang]
-symbol = "󰟔 "
-
-[ruby]
-symbol = "󰴭 "
+symbol = "📐"
 
 [rust]
-symbol = "󱘗 "
+symbol = "🦀"
 
-[scala]
-symbol = " "
-
-[shell]
-
+# tombi: format.rules.table-keys-order = "ascending"
 [shlvl]
 disabled = false
-symbol = "🎚️ "
-
-[singularity]
-
-[solidity]
-symbol = " "
-
-[spack]
-symbol = " "
-
-[status]
-disabled = false
-format = "[$symbol$status(\\($common_meaning$signal_name\\))]($style) "
-not_executable_symbol = "noexec"
-not_found_symbol = "notfound"
-pipestatus = true
-pipestatus_format = "\\[$pipestatus\\] => [$symbol$status(\\($common_meaning$signal_name\\))]($style) "
-sigint_symbol = "sigint"
-signal_symbol = "sig"
-success_symbol = ""
-symbol = "[❌](bold red) "
-
-[sudo]
-
-[swift]
-symbol = "󰛥 "
-
-[terraform]
-symbol = "󱁢 "
-
-[time]
-
-[typst]
-symbol = " "
-
-[username]
-
-[vagrant]
-symbol = " "
-
-[vcs]
-
-[vcsh]
-
-[vlang]
-symbol = " "
-
-[xmake]
-disabled = true
-
-[zig]
-symbol = " "
+symbol = "🎚️"
