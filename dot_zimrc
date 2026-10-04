@@ -8,7 +8,6 @@
 
 zmodule environment # Sets sane Zsh built-in environment options.
 zmodule input       # Applies correct bindkeys for input events.
-zmodule magic-enter # Shown when there is no command and user presses ENTER.
 
 #
 # Completion
