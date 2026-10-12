@@ -26,6 +26,11 @@
     "type": "archive",
     "url": "https://github.com/catppuccin/ghostty/archive/refs/heads/main.zip"
   },
+  ".config/nvim": {
+    "refreshPeriod": "168h",
+    "type": "git-repo",
+    "url": "https://github.com/weitero/nvim.git"
+  },
   "Library/Developer/Xcode/UserData/FontAndColorThemes": {
     "include": [
       "*/themes/**"
