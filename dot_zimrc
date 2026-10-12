@@ -24,13 +24,6 @@ zmodule completion
 zmodule archive # Provides functions for easy archive manipulation.
 zmodule smite   # Makes it easier to opt-out of typos and dead ends in your shell history.
 
-zmodule ohmyzsh/ohmyzsh --root plugins/brew
-zmodule ohmyzsh/ohmyzsh --root plugins/cp
-zmodule ohmyzsh/ohmyzsh --root plugins/fzf
-zmodule ohmyzsh/ohmyzsh --root plugins/git
-zmodule ohmyzsh/ohmyzsh --root plugins/pip
-zmodule ohmyzsh/ohmyzsh --source lib/directories.zsh --cmd 'unalias lsa l ll la'
-
 #
 # Modules that must be initialized last
 #
