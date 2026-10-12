@@ -45,16 +45,15 @@ Preview changes at any time:
 chezmoi diff
 ```
 
-## What’s included
+## What's included
 
-- Shell: Zsh + zimfw
-- Prompt/terminal: Starship + Ghostty
-- tmux: minimal config
-- Homebrew: environment defaults
-- Tooling configs for common formatters/linters (Biome, Ruff, sqlfluff, etc.)
-- Themes: Catppuccin for bat, Ghostty, and tmux (managed via `.chezmoiexternal.toml`, refreshed weekly)
-- Writing tools: Vale + related macOS app configs under `~/Library/...` (chezmoi `private_` paths)
-- mise: CLI tool versions and utilities
+- Shell: Zsh + zimfw, with a Starship prompt
+- Terminal and tools: Ghostty, bat, and herdr configs
+- Homebrew environment defaults
+- mise-managed language servers, formatters, linters, and utilities
+- Writing tools: Vale and Marksman-related configs under `~/Library/...`
+- Catppuccin themes for bat, Ghostty, herdr, and Xcode
+- External Ghostty shaders
 
 ## Repo layout (chezmoi conventions)
 
@@ -67,7 +66,7 @@ chezmoi diff
 
 - Don’t apply blindly on a machine you care about—always check `chezmoi diff` first.
 - This repo assumes Homebrew under `/opt/homebrew` and zimfw installed via Homebrew.
-- Some configs reference external plugins/tools; Catppuccin assets are managed via `.chezmoiexternal.toml`, but other tools may need to be installed separately.
+- Chezmoi fetches external assets via `.chezmoiexternal.json` weekly; install other tools separately.
 
 ## License
 
