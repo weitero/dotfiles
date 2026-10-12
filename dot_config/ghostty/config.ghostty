@@ -1,13 +1,14 @@
+# font-family = MonaspiceAr NF
 adjust-cursor-thickness = 500%
 auto-update = off
 background-blur = true
 background-opacity = 0.85
 clipboard-paste-protection = true
 custom-shader = ~/.config/ghostty/shaders/cursor_frozen.glsl
-font-family = MartianMono NF
+font-family = NK57MonospaceSeRg Nerd Font
 font-family = Twitter Color Emoji
 font-feature = -calt, -liga, -dlig
-font-size = 16
+font-size = 15
 keybind = global:cmd+backquote=toggle_quick_terminal
 macos-icon = glass
 macos-option-as-alt = right
