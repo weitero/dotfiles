@@ -11,6 +11,7 @@ ZSH_AUTOSUGGEST_MANUAL_REBIND=1
 eval "$(mise activate --shims)"
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
+source <(fzf --zsh)
 
 alias q='exit'
 alias vi='nvim'
@@ -35,3 +36,21 @@ alias rm='rm -iv'
 alias kat='cat -enstv'
 alias kurl='curl -LZJOR --compressed'
 alias les='less -FgiJmNsSw --incsearch --mouse --use-color'
+
+alias bu='brew update'
+alias bup='brew upgrade'
+
+alias ga='git add'
+alias gd='git diff'
+alias gp='git push'
+alias gst='git status'
+
+setopt AUTO_CD
+setopt AUTO_PUSHD
+setopt PUSHDMINUS
+setopt PUSHD_IGNORE_DUPS
+
+alias ......='../../../../..'
+alias .....='../../../..'
+alias ....='../../..'
+alias ...='../..'
