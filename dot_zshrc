@@ -8,7 +8,7 @@ source "${ZIM_HOME}"/init.zsh
 
 # Add the following to your ~/.zshrc to boost performance:
 ZSH_AUTOSUGGEST_MANUAL_REBIND=1
-eval "$(mise activate --shims)"
+eval "$(mise activate zsh --shims)"
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 source <(fzf --zsh)
