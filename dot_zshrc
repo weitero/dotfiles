@@ -54,3 +54,5 @@ alias ......='../../../../..'
 alias .....='../../../..'
 alias ....='../../..'
 alias ...='../..'
+
+alias icat='kitten icat --align left'
