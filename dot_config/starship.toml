@@ -49,6 +49,9 @@ typechanged = "<"
 untracked = "?"
 up_to_date = "."
 
+[gleam]
+symbol = "🌟"
+
 [golang]
 symbol = "🐹"
 
