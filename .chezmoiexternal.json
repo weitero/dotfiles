@@ -1,7 +1,7 @@
 {
-  ".config/nvim": {
+  "repos/nvim": {
     "refreshPeriod": "168h",
     "type": "git-repo",
-    "url": "https://github.com/weitero/nvim.git"
+    "url": "git@github.com:weitero/nvim.git"
   }
 }
