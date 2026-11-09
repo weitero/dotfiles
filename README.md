@@ -4,7 +4,7 @@ Personal dotfiles managed with:
 
 - [chezmoi](https://www.chezmoi.io/) (dotfile tracking + templating)
 - [zimfw](https://zimfw.sh/) (Zsh module manager)
-- [mise](https://mise.jdx.dev/) (CLI tool versions)
+- [mise](https://mise.jdx.dev/) (command-line tool versions)
 
 This setup is primarily for macOS + Zsh + Homebrew.
 
@@ -20,10 +20,10 @@ This setup is primarily for macOS + Zsh + Homebrew.
 
 ## Repo layout (chezmoi conventions)
 
-- `dot_*` → `.*` in `$HOME` (e.g. `dot_zshrc` → `~/.zshrc`)
+- `dot_*` → `.*` in `$HOME` (for example `dot_zshrc` → `~/.zshrc`)
 - `dot_config/*` → `~/.config/*`
-- `private_*` → paths marked “private” by chezmoi (e.g. `~/Library/...`)
-- `empty_*` → empty files (e.g. `empty_dot_hushlogin` → `~/.hushlogin`)
+- `private_*` → paths marked “private” by chezmoi (for example `~/Library/...`)
+- `empty_*` → empty files (for example `empty_dot_hushlogin` → `~/.hushlogin`)
 
 ## Notes
 
@@ -32,4 +32,4 @@ This setup is primarily for macOS + Zsh + Homebrew.
 
 ## License
 
-MIT — see LICENSE.
+MIT—see LICENSE.
